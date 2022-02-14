@@ -1,0 +1,13 @@
+.container{
+  position: absolute;
+  top: 0;
+  left: 200px;
+  height: 100vh;
+  width: calc(100vw - 200px);
+}
+
+.container-title{
+  color:#8AAE92;
+  text-align: center;
+  font-size: 100px;
+}

@@ -1,12 +1,13 @@
 import {Link} from 'react-router-dom';
+import Container from '../../components/Container';
 
 const MainPage = () => {
   return (
-    <div>
+    <Container>
       <Link to="/">
         <p style={{height:"50px", width:"50px", backgroundColor:"blue"}}>a</p>
       </Link>
-    </div>
+    </Container>
   )
 }
 

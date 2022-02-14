@@ -1,0 +1,69 @@
+#spinner-container{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.slottt-machine-recipe {
+  margin: 0px auto;
+  width: 700px;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+.slottt-machine-recipe__mask {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin-bottom: -40px;
+}
+
+.slottt-machine-recipe__items_container {
+    position: absolute;
+}
+
+.slottt-machine-recipe__item {
+    min-height: 150px;
+    max-height: 150px;
+    margin: 0px;
+    padding: 0px;
+    background-size: contain;
+}
+
+/* Typography */
+
+
+.recipe_if, .recipe_then {
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.tagline {
+  font-weight: normal;
+  font-size: 24px;
+}
+
+a {
+ font-weight: bold;
+ text-decoration: none;
+ color: #33CCFF;
+}
+
+#prev-button, #next-button{
+  width: 100px;
+  height: 50px;
+  -webkit-clip-path: polygon(0px 0px, 50px 20px, 100px 0px, 80px 0px, 50px 10px, 20px 0px);
+  clip-path: polygon(0px 0px, 50px 50px, 100px 0px, 80px 0px, 50px 30px, 20px 0px);
+  background-color: #8AAE92;
+  left: 25%;
+  position: relative;
+  cursor: pointer;
+}
+
+#prev-button{
+  transform: rotate(180deg);
+}

@@ -4,13 +4,15 @@ import SuspensePage from '../SuspensePage';
 
 
 const MainPage = lazy( () => import( "../MainPage" ) );
-const SecondPage = lazy( () => import( "../SecondPage" ) );
+const SkillsPage = lazy( () => import( "../SkillsPage" ) );
+const GraphsPage = lazy( () => import( "../GraphsPage" ) );
 
 const RoutesPublics = () => {
 
   const [routes, updateRoutes] = useState([
    { path: '/', component: MainPage },
-   { path: '/b', component: SecondPage },
+   { path: '/skills', component: SkillsPage },
+   { path: '/graphs', component: GraphsPage },
  ]);
 
 

@@ -8,7 +8,7 @@ function Sidebar({ children }) {
   const [links, setLinks] = useState([
     {label: "Who am i?" , endpoint: "/"},
     {label: "Skillset", endpoint: "/skills"},
-    {label: "Graphs", endpoint: "/graphs"}
+    {label: "Portfolio", endpoint: "/portfolio"}
   ])
 
   return(

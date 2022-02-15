@@ -1,0 +1,9 @@
+#portfolio-wrapper{
+  padding-left: 15%;
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 100px 100px 100px;
+  grid-gap: 20px;
+  transition: all 1s;
+}

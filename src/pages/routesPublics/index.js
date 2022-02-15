@@ -5,14 +5,14 @@ import SuspensePage from '../SuspensePage';
 
 const MainPage = lazy( () => import( "../MainPage" ) );
 const SkillsPage = lazy( () => import( "../SkillsPage" ) );
-const GraphsPage = lazy( () => import( "../GraphsPage" ) );
+const PortfolioPage = lazy( () => import( "../PortfolioPage" ) );
 
 const RoutesPublics = () => {
 
   const [routes, updateRoutes] = useState([
    { path: '/', component: MainPage },
    { path: '/skills', component: SkillsPage },
-   { path: '/graphs', component: GraphsPage },
+   { path: '/portfolio', component: PortfolioPage },
  ]);
 
 

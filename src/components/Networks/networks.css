@@ -1,0 +1,64 @@
+#networks-corner{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #8aae92;
+  transition: .3s ease-in;
+  -webkit-clip-path: polygon(12% 12%, 31% 6%, 57% 2%, 100% 0, 100% 100%, 0 100%, 12% 69%, 13% 47%, 11% 35%, 7% 27%, 0 19%);
+  clip-path: polygon(12% 12%, 31% 6%, 57% 2%, 100% 0, 100% 100%, 0 100%, 12% 69%, 13% 47%, 11% 35%, 7% 27%, 0 19%);
+
+}
+
+#networks-corner:hover{
+  width:400px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #8aae92;
+  -webkit-clip-path: polygon(100% 100%, 100% 0%, 83% 1%, 67% 3%, 54% 5%, 39% 10%, 27% 15%, 14% 24%, 0 37%, 4% 41%, 8% 48%, 11% 55%, 14% 67%, 16% 81%, 16% 92%, 15% 100%);
+  clip-path: polygon(100% 100%, 100% 0%, 83% 1%, 67% 3%, 54% 5%, 39% 10%, 27% 15%, 14% 24%, 0 37%, 4% 41%, 8% 48%, 11% 55%, 14% 67%, 16% 81%, 16% 92%, 15% 100%);
+}
+
+#networks-corner:hover > #networks-triangle{
+    -webkit-clip-path: polygon( 100% 0%, 83% 1%, 67% 3%, 54% 5%, 39% 10%, 27% 15%, 14% 24%, 0 37%, 4% 41%, 8% 48%, 11% 55%, 14% 67%, 16% 81%, 16% 92%, 15% 100%);
+    clip-path:  polygon( 100% 0%, 83% 1%, 67% 3%, 54% 5%, 39% 10%, 27% 15%, 14% 24%, 0 37%, 4% 41%, 8% 48%, 11% 55%, 14% 67%, 16% 81%, 16% 92%, 15% 100%);
+
+}
+
+#networks-triangle{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: .3s ease-in;
+  -webkit-clip-path: polygon(12% 12%, 31% 6%, 57% 2%, 100% 0, 0 100%, 12% 69%, 13% 47%, 11% 35%, 7% 27%, 0 19%);
+  clip-path: polygon(12% 12%, 31% 6%, 57% 2%, 100% 0, 0 100%, 12% 69%, 13% 47%, 11% 35%, 7% 27%, 0 19%);
+  background-image: linear-gradient(to bottom right,white, gray);
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  z-index: 2;
+}
+
+#networks-img{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+#social-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+}

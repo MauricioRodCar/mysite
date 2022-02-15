@@ -61,13 +61,13 @@ const GraphsPage = () => {
           description: ""
         },
         {
-          name: "React Hooks",
-          level: "85%",
+          name: "JQuery",
+          level: "80%",
           description: ""
         },
         {
-          name: "JQuery",
-          level: "80%",
+          name: "PHP",
+          level: "75%",
           description: ""
         },
         {

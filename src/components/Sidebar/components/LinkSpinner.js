@@ -44,8 +44,8 @@ function animate(n) {
         <div className="slottt-machine-recipe__mask" id="wordbox">
             <div className="slottt-machine-recipe__items_container recipe_if" id="item-container">
               {
-                sideLinks.map(link =>
-                  <div className='slottt-machine-recipe__item'>
+                sideLinks.map((link, id) =>
+                  <div className='slottt-machine-recipe__item' key={id}>
                     {link.label}
                   </div>
                 )

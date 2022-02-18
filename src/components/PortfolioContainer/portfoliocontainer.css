@@ -3,10 +3,20 @@
   border-radius: 10px;
   text-align: center;
   position: relative;
+  transition: .25s;
+}
+
+.shrink {
+  transform: scale(.25)
 }
 
 .portfolio-title{
   font-size: 2em;
+}
+
+.portfolio-description{
+  margin-left: 10%;
+  width: 80%;
 }
 
 .portfolio-tag-container{

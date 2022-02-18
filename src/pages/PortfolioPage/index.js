@@ -8,6 +8,7 @@ const PortfolioPage = () => {
   const [page,setPage] = useState(1);
   const [pageTotal,setPageTotal] = useState(1);
   const [showingElements, setShowingElements] = useState([]);
+  const [customClass, setCustomClass] = useState("");
   const [filters, setFilters] = useState([true,true,true]);
 
 
@@ -15,6 +16,8 @@ const PortfolioPage = () => {
       let elements = [];
       let filteredItems = [];
       let activeFilters = [];
+      setCustomClass("shrink");
+
       for (let i = 0; i < filters.length; i++) {
         if (filters[i]) {
           activeFilters.push(i+1)
@@ -29,72 +32,76 @@ const PortfolioPage = () => {
       for (let i = (page-1)*6; i < page*6 && i < filteredItems.length; i++) {
         elements.push(filteredItems[i]);
       }
-      setPageTotal(Math.ceil(filteredItems.length/6))
-      setShowingElements(elements)
+      setTimeout(()=>{
+        setPageTotal(Math.ceil(filteredItems.length/6))
+        setShowingElements(elements)
+        setCustomClass("")
+      }, 250);
+
     }, [filters, page])
 
   const [tags] = useState([
     {
-      name:"taga",
+      name:"React",
       color:"#008E89"
     },
     {
-      name:"tagb",
+      name:"Php",
       color:"#FFD32D"
     },
     {
-      name:"tagc",
+      name:"Java",
       color:"#084594"
     }
   ])
 
   const [portfolioItems] = useState([
     {
-      title: "Coming soon",
+      title: "React/php template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a react/php project for my portfolio please wait for it",
       tags: [1, 2]
     },
     {
-      title: "Coming soon",
+      title: "Php/Java template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a php/java project for my portfolio please wait for it",
       tags: [2, 3]
     },
     {
-      title: "Coming soon",
+      title: "Php template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a php project for my portfolio please wait for it",
       tags: [2]
     },
     {
-      title: "Coming soon",
+      title: "React/Java template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a react/java project for my portfolio please wait for it",
       tags: [1, 3]
     },
     {
-      title: "Coming soon",
+      title: "Php/Java template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a php/java project for my portfolio please wait for it",
       tags: [2, 3]
     },
     {
-      title: "Coming soon",
+      title: "React template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a react project for my portfolio please wait for it",
       tags: [1]
     },
     {
-      title: "Coming soon",
+      title: "React/Php/Java template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a react/php/java project for my portfolio please wait for it",
       tags: [1, 2, 3]
     },
     {
-      title: "Coming soon",
+      title: "React/Php template",
       endpoint: "/testa",
-      description: "testdesc",
+      description: "This might eventually become a react/php project for my portfolio please wait for it",
       tags: [1, 2]
     },
   ])
@@ -106,7 +113,7 @@ const PortfolioPage = () => {
     setPage(1)
     setFilters(newFilters);
   }
-
+  console.log(customClass);
 
   return (
     <Container title="Portfolio">
@@ -115,7 +122,7 @@ const PortfolioPage = () => {
       {
         tags.map((tag, index) =>
 
-        <div className="portfolio-tag" style={filters[index]?{backgroundColor:tag.color}:{backgroundColor:"gray"}} onClick={()=>{handlefilters(index)}}>
+        <div className="portfolio-tag" style={filters[index]?{backgroundColor:tag.color}:{backgroundColor:"gray"}} onClick={()=>{handlefilters(index)}} key={index}>
           <p className="portfolio-tag-name">{tag.name}</p>
         </div>
       )
@@ -123,7 +130,7 @@ const PortfolioPage = () => {
     </div>
       <div id="portfolio-wrapper">
         {showingElements.map((item, index) =>
-          <PortfolioContainer key={index} index={index} title={item.title} endpoint={item.endpoint} description={item.description} tags={item.tags} listOfTags={tags}/>
+          <PortfolioContainer key={index} index={index} title={item.title} endpoint={item.endpoint} description={item.description} tags={item.tags} listOfTags={tags} customClass={customClass}/>
         )}
       </div>
       <div className="arrows-container">

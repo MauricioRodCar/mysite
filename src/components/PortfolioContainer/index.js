@@ -1,10 +1,28 @@
-import { useState, React } from 'react';
+import { React } from 'react';
 import './portfoliocontainer.css'
 
-function PortfolioContainer({index, title, endpoint, description, tags }) {
+function PortfolioContainer({index, title, endpoint, description, tags, listOfTags }) {
+
+
+
+  let itemTags = [];
+  for (var i = 0; i < tags.length; i++) {
+    itemTags.push(listOfTags[tags[i]-1]);
+  }
+
   return(
-    <div>
-      <p>{title}</p>
+    <div className="portfolio-container">
+      <p className="portfolio-title">{title}</p>
+      <p className="portfolio-description">{description}</p>
+      <div className="portfolio-tag-container">
+      {
+        itemTags.map( (itemTag,index) =>
+          <div className="portfolio-tag" style={{backgroundColor:itemTag.color}}>
+            <p className="portfolio-tag-name">{itemTag.name}</p>
+          </div>
+         )
+      }
+      </div>
     </div>
   )
 };

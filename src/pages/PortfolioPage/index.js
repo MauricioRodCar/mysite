@@ -33,74 +33,79 @@ const PortfolioPage = () => {
         elements.push(filteredItems[i]);
       }
       setTimeout(()=>{
+        setCustomClass("");
         setPageTotal(Math.ceil(filteredItems.length/6))
         setShowingElements(elements)
-        setCustomClass("")
+      }, 125
+      )
+      setTimeout(()=>{
+
+        setCustomClass("fullsize")
       }, 250);
 
     }, [filters, page])
 
   const [tags] = useState([
     {
-      name:"React",
+      name:"Forms",
       color:"#008E89"
     },
     {
-      name:"Php",
+      name:"Interactive",
       color:"#FFD32D"
     },
     {
-      name:"Java",
+      name:"Download",
       color:"#084594"
     }
   ])
 
   const [portfolioItems] = useState([
     {
-      title: "React/php template",
-      endpoint: "/testa",
-      description: "This might eventually become a react/php project for my portfolio please wait for it",
-      tags: [1, 2]
+      title: "Recipe builder",
+      endpoint: "/recipe",
+      description: "This small project allows you to create a recipe, add an image and download the result",
+      tags: [1, 2, 3]
     },
     {
       title: "Php/Java template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a php/java project for my portfolio please wait for it",
       tags: [2, 3]
     },
     {
       title: "Php template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a php project for my portfolio please wait for it",
       tags: [2]
     },
     {
       title: "React/Java template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a react/java project for my portfolio please wait for it",
       tags: [1, 3]
     },
     {
       title: "Php/Java template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a php/java project for my portfolio please wait for it",
       tags: [2, 3]
     },
     {
       title: "React template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a react project for my portfolio please wait for it",
       tags: [1]
     },
     {
       title: "React/Php/Java template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a react/php/java project for my portfolio please wait for it",
       tags: [1, 2, 3]
     },
     {
       title: "React/Php template",
-      endpoint: "/testa",
+      endpoint: "",
       description: "This might eventually become a react/php project for my portfolio please wait for it",
       tags: [1, 2]
     },

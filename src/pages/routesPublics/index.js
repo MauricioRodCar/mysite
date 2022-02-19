@@ -6,6 +6,8 @@ import SuspensePage from '../SuspensePage';
 const MainPage = lazy( () => import( "../MainPage" ) );
 const SkillsPage = lazy( () => import( "../SkillsPage" ) );
 const PortfolioPage = lazy( () => import( "../PortfolioPage" ) );
+const RecipePage = lazy( () => import( "../Projects/RecipePage" ) );
+
 
 const RoutesPublics = () => {
 
@@ -13,6 +15,7 @@ const RoutesPublics = () => {
    { path: '/', component: MainPage },
    { path: '/skills', component: SkillsPage },
    { path: '/portfolio', component: PortfolioPage },
+   { path: '/recipe', component: RecipePage },
  ]);
 
 

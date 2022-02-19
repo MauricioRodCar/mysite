@@ -1,8 +1,13 @@
 import { React } from 'react';
+import { useHistory } from "react-router-dom";
 import './portfoliocontainer.css'
 
 function PortfolioContainer({index, title, endpoint, description, tags, listOfTags, customClass }) {
+  const history = useHistory();
 
+  function redirect(){
+    history.push(endpoint);
+  }
 
 
   let itemTags = [];
@@ -11,7 +16,11 @@ function PortfolioContainer({index, title, endpoint, description, tags, listOfTa
   }
 
   return(
-    <div className={"portfolio-container "+customClass}>
+    <div className={"portfolio-container "+customClass} style={endpoint?null:{filter: "grayscale(100%)", cursor:"auto"}} onClick={()=>{
+      if (endpoint) {
+        redirect()
+      }
+    }}>
       <p className="portfolio-title">{title}</p>
       <p className="portfolio-description">{description}</p>
       <div className="portfolio-tag-container">

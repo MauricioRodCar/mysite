@@ -1,0 +1,15 @@
+.input-label{
+  font-size: 2em;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.custom-textarea{
+  border: none;
+  border-bottom: 2px solid #616161;
+  background-color: transparent;
+  font-family: 'Redressed', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    resize: none;
+}

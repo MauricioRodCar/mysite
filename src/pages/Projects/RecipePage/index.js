@@ -41,6 +41,9 @@ const RecipePage = () => {
     setIngredients(newIngredients)
   }
 
+  console.log( window.innerWidth + "," + window.innerHeight);
+
+
   return (
     <ProjectContainer title="Recipe builder">
     <div className="recipe-wrapper">

@@ -21,7 +21,14 @@
   top: 125px;
   left: 50px;
   cursor: pointer;
+  transition: .2s ease-out;
   -webkit-clip-path: polygon(0% 50%, 40% 0%, 40% 25%, 100% 25%, 100% 75%,40% 75%, 40% 100%, 0% 50%);
   clip-path: polygon(0% 50%, 40% 0%, 40% 25%, 100% 25%, 100% 75%, 40% 75%, 40% 100%, 0% 50%);
 
+}
+
+@media (max-width: 880px){
+  .back-to-portfolio{
+    left: 0px;
+  }
 }

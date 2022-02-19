@@ -16,7 +16,7 @@
 }
 
 .portfolio-filter-tag-container{
-  width: 50%;
+  width: 75%;
   text-align: center;
   float: right;
   margin-bottom: 25px;
@@ -55,4 +55,49 @@
 
 #filters-label{
   font-size: 2em;
+}
+
+.portfolio-filter-tag{
+  width: 100px;
+  display: inline-block;
+  color: white;
+  height: 20px;
+  border-radius: 10px;
+  margin: 0 5%;
+  cursor: pointer;
+}
+
+@media (max-width: 1290px){
+  .portfolio-filter-tag{
+    margin: 0 2.5%;
+  }
+  #portfolio-wrapper{
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+@media (max-width: 800px){
+  .portfolio-filter-tag-container{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 875px){
+  #portfolio-wrapper{
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+}
+
+@media (max-height: 700px){
+  .portfolio-title{
+    margin: 5% 0;
+  }
+
+  .portfolio-description{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 }

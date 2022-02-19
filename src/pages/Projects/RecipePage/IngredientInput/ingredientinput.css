@@ -42,3 +42,19 @@
 .custom-input-ingredient-text{
   width: 45%;
 }
+
+@media (max-width: 1400px) {
+
+  .custom-input-ingredient-text{
+    width: 30%;
+  }
+
+}
+@media (max-width: 1100px) {
+
+  #ingredient-size-select{
+    width: 85px;
+  }
+
+
+}

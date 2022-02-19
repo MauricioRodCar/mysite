@@ -5,16 +5,16 @@ import './ingredientinput.css'
 const IngredientInput = ({handleChange}) => {
 
   const [sizes, setSizes] = useState([
-    "Tablespoons of",
+    "Tbsp of",
     "Cups of",
     "Pieces of",
     "Pounds of",
     "Ounce of",
-    "Kilograms of",
+    "Kg of",
     "Grams of",
     "Liters of",
     "Cm3 of",
-    "Gallons of"
+    "Gal of"
   ])
 
   const [amount, setAmount] = useState(1);
@@ -33,7 +33,7 @@ const IngredientInput = ({handleChange}) => {
       <div>
 
         <input className="custom-input-ingredient" type="number" min="0" value={amount} onChange={(e)=>{setAmount(e.target.value)}}/>
-        <select value={size} onChange={(e)=>{setSize(e.target.value)}}>
+        <select id="ingredient-size-select" value={size} onChange={(e)=>{setSize(e.target.value)}}>
         {
             sizes.map((size, index) =>
             <option key={index} value={size}>{size}</option>

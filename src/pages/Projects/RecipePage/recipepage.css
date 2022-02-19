@@ -67,3 +67,42 @@
   width: 45%;
   height: 100%;
 }
+
+input, textarea{
+  transition: 1s ease-out;
+}
+
+@media (max-width: 1167px) {
+
+  .customButton{
+    width: 150px;
+    font-size: 1.5em;
+  }
+
+}
+
+@media (max-width: 1028px) {
+
+  .add-button{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 966px) {
+  #photo-delete-button{
+    margin-left: 0px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 890px) {
+
+  .custom-textarea{
+    width: 200px;
+  }
+
+}

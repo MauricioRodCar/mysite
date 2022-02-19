@@ -3,6 +3,8 @@ import './skillcontainer.css'
 
 function SkillContainer({ children, skills, isActive, index, changeActive }) {
 
+  const isIpad = window.matchMedia("(max-width: 861px) and (min-height: 1000px)").matches;
+
   const [hoveredSkill, setHoveredSkill] = useState(-1);
 
   const [full, setFull] = useState(false);
@@ -12,35 +14,77 @@ function SkillContainer({ children, skills, isActive, index, changeActive }) {
   }
 
   let gtc="";
-  let gtr="75px 75px 75px";
-  if (hoveredSkill==-1) {
-    gtc="25% 25% 25%";
-    gtr="75px 75px 75px";
-  }else {
-    switch (hoveredSkill%3) {
-      case 0:
-          gtc="35% 25% 25%";
-        break;
-      case 1:
-          gtc="25% 35% 25%";
-        break;
-      case 2:
-          gtc="25% 25% 35%";
-        break;
+  let gtr="";
 
-    }
-    switch (Math.floor(hoveredSkill/3)) {
-      case 0:
-        gtr="125px 75px 75px";
-        break;
-      case 1:
-        gtr="75px 125px 75px";
-        break;
-      case 2:
-        gtr="75px 75px 125px";
-        break;
+  switch (true) {
+    case isIpad:
 
-    }
+      if (hoveredSkill==-1) {
+        gtc="45% 45%";
+        gtr="75px 75px 75px 75PX 75PX";
+      }else {
+        switch (hoveredSkill%2) {
+          case 0:
+              gtc="55% 45%";
+            break;
+          case 1:
+              gtc="45% 55%";
+            break;
+
+        }
+        switch (Math.floor(hoveredSkill/2)) {
+          case 0:
+            gtr="125px 75px 75px 75px 75px";
+            break;
+          case 1:
+            gtr="75px 125px 75px 75px 75px";
+            break;
+          case 2:
+            gtr="75px 75px 125px 75px 75px";
+            break;
+          case 3:
+            gtr="75px 75px 75px 125px 75px";
+            break;
+          case 4:
+            gtr="75px 75px 75px 75px 125px";
+            break;
+        }
+      }
+
+      break;
+    default:
+
+      if (hoveredSkill==-1) {
+        gtc="25% 25% 25%";
+        gtr="75px 75px 75px";
+      }else {
+        switch (hoveredSkill%3) {
+          case 0:
+              gtc="35% 25% 25%";
+            break;
+          case 1:
+              gtc="25% 35% 25%";
+            break;
+          case 2:
+              gtc="25% 25% 35%";
+            break;
+
+        }
+        switch (Math.floor(hoveredSkill/3)) {
+          case 0:
+            gtr="125px 75px 75px";
+            break;
+          case 1:
+            gtr="75px 125px 75px";
+            break;
+          case 2:
+            gtr="75px 75px 125px";
+            break;
+
+        }
+      }
+
+      break;
   }
 
 

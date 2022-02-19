@@ -1,5 +1,5 @@
 #greeting{
-  font-size: 100px;
+  font-size: 8ch;
   width: 60vw;
   margin: auto;
 }
@@ -8,4 +8,16 @@
 #hi{
   font-size: 200px;
   color:#8AAE92;
+}
+
+@media (max-width: 1040px){
+  #greeting{
+    font-size: 7ch;
+  }
+
+
+  #hi{
+    font-size: 150px;
+    color:#8AAE92;
+  }
 }

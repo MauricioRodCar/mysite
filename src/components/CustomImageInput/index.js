@@ -12,7 +12,7 @@ const CustomImageInput = ({ children, label, loadImage, image, handleDelete }) =
       <label htmlFor="upload-photo" style={{display:"inline-block"}}>
         <p className="customButton">{image?"Update image":"Upload image"}</p>
       </label>
-      <p className="customButton" style={{display:"inline-block", marginLeft:"25px"}} onClick={()=>{handleDelete()}}>Delete image</p>
+      <p className="customButton" id="photo-delete-button" style={{display:"inline-block"}} onClick={()=>{handleDelete()}}>Delete image</p>
     </div>
   )
 };

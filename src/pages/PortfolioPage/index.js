@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useLayoutEffect} from 'react';
 import Container from '../../components/Container';
 import PortfolioContainer from '../../components/PortfolioContainer';
 import './portfoliopage.css'
@@ -10,13 +10,37 @@ const PortfolioPage = () => {
   const [showingElements, setShowingElements] = useState([]);
   const [customClass, setCustomClass] = useState("");
   const [filters, setFilters] = useState([true,true,true]);
+  const [isIpad, setIsIpad] = useState(window.matchMedia("(max-width: 1280px)").matches)
+  const [isPhone, setIsPhone] = useState(window.matchMedia("(max-width: 875px)").matches)
 
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setIsIpad(window.innerWidth <= 1290);
+      setIsPhone(window.innerWidth <= 875);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   useEffect(() => {
       let elements = [];
       let filteredItems = [];
       let activeFilters = [];
       setCustomClass("shrink");
+      let pageSize = 6;
+
+      switch (true) {
+        case isPhone:
+          pageSize = 2;
+          break;
+        case isIpad:
+          pageSize = 4;
+          break;
+        default:
+
+      }
 
       for (let i = 0; i < filters.length; i++) {
         if (filters[i]) {
@@ -29,12 +53,12 @@ const PortfolioPage = () => {
         }
       }
 
-      for (let i = (page-1)*6; i < page*6 && i < filteredItems.length; i++) {
+      for (let i = (page-1)*pageSize; i < page*pageSize && i < filteredItems.length; i++) {
         elements.push(filteredItems[i]);
       }
       setTimeout(()=>{
         setCustomClass("");
-        setPageTotal(Math.ceil(filteredItems.length/6))
+        setPageTotal(Math.ceil(filteredItems.length/pageSize))
         setShowingElements(elements)
       }, 125
       )
@@ -43,7 +67,7 @@ const PortfolioPage = () => {
         setCustomClass("fullsize")
       }, 250);
 
-    }, [filters, page])
+    }, [filters, page, isIpad, isPhone])
 
   const [tags] = useState([
     {
@@ -118,8 +142,7 @@ const PortfolioPage = () => {
     setPage(1)
     setFilters(newFilters);
   }
-  console.log(customClass);
-
+  console.log( window.innerWidth + "," + window.innerHeight);
   return (
     <Container title="Portfolio">
     <div className="portfolio-filter-tag-container">
@@ -127,7 +150,7 @@ const PortfolioPage = () => {
       {
         tags.map((tag, index) =>
 
-        <div className="portfolio-tag" style={filters[index]?{backgroundColor:tag.color}:{backgroundColor:"gray"}} onClick={()=>{handlefilters(index)}} key={index}>
+        <div className="portfolio-filter-tag" style={filters[index]?{backgroundColor:tag.color}:{backgroundColor:"gray"}} onClick={()=>{handlefilters(index)}} key={index}>
           <p className="portfolio-tag-name">{tag.name}</p>
         </div>
       )

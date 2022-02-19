@@ -40,11 +40,17 @@
   display: inline-block;
   color: white;
   height: 20px;
-  width: 75px;
+  width: 20%;
   border-radius: 10px;
   margin: 0 5%;
 }
 
 .portfolio-tag-name{
     margin: 0;
+}
+
+@media (max-width: 1920px){
+  .portfolio-tag{
+    font-size: 1.2ch;
+  }
 }

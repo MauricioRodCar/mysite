@@ -103,6 +103,10 @@
 
 @media (max-width:415px){
 
+  .skill-title{
+    font-size: .6ch;
+  }
+
   .skill-group-container{
     width: 90%;
     margin: 0 5%;

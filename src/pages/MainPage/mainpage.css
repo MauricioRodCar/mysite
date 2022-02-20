@@ -21,3 +21,17 @@
     color:#8AAE92;
   }
 }
+
+@media (max-width: 415px){
+  #greeting{
+    font-size: 6ch;
+    width: 80%;
+    margin-bottom: 10%;
+  }
+
+
+  #hi{
+    font-size: 150px;
+    color:#8AAE92;
+  }
+}

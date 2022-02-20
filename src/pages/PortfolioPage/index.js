@@ -12,12 +12,14 @@ const PortfolioPage = () => {
   const [filters, setFilters] = useState([true,true,true]);
   const [isIpad, setIsIpad] = useState(window.matchMedia("(max-width: 1280px)").matches)
   const [isPhone, setIsPhone] = useState(window.matchMedia("(max-width: 875px)").matches)
+  const [isIphone, setIsIphone] = useState(window.matchMedia("(max-width: 415px)").matches)
 
 
   useLayoutEffect(() => {
     function updateSize() {
       setIsIpad(window.innerWidth <= 1290);
       setIsPhone(window.innerWidth <= 875);
+      setIsIphone(window.innerWidth <= 415);
     }
     window.addEventListener('resize', updateSize);
     updateSize();
@@ -67,7 +69,7 @@ const PortfolioPage = () => {
         setCustomClass("fullsize")
       }, 250);
 
-    }, [filters, page, isIpad, isPhone])
+    }, [filters, page, isIpad, isPhone, isIphone])
 
   const [tags] = useState([
     {
@@ -142,11 +144,12 @@ const PortfolioPage = () => {
     setPage(1)
     setFilters(newFilters);
   }
-  console.log( window.innerWidth + "," + window.innerHeight);
   return (
     <Container title="Portfolio">
     <div className="portfolio-filter-tag-container">
-    <label id="filters-label">Filters:</label>
+    {
+      isIphone?null:<label id="filters-label">Filters:</label>
+    }
       {
         tags.map((tag, index) =>
 

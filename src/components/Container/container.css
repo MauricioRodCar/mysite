@@ -24,3 +24,17 @@
     font-size: 7em;
   }
 }
+
+@media (max-width: 415px ) {
+  .container{
+    top: 10%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .container-title{
+    font-size: 6em;
+  }
+}

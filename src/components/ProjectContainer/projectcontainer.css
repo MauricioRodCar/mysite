@@ -32,3 +32,22 @@
     left: 0px;
   }
 }
+
+@media (max-width: 415px ) {
+  .container{
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .project-container-title{
+    font-size: 5em;
+  }
+
+  .back-to-portfolio{
+    width: 50px;
+    left: 25px;
+
+  }
+}

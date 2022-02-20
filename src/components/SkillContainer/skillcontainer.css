@@ -7,7 +7,6 @@
   padding-right: 10%;
   display: grid;
   grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 100px 100px 100px;
   grid-gap: 20px;
   transition: all 1s;
 
@@ -100,4 +99,31 @@
   .skill-title{
     font-size: .75ch;
   }
+}
+
+@media (max-width:415px){
+
+  .skill-group-container{
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  #skill-group-container-selected{
+    height: auto;
+
+  }
+
+  .wrapper{
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-columns: 90%;
+    grid-gap: 20px;
+    transition: all 1s;
+
+  }
+
+  .meter{
+    width: 75%;
+  }
+
 }

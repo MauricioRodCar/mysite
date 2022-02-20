@@ -4,12 +4,14 @@ import './skillcontainer.css'
 function SkillContainer({ children, skills, isActive, index, changeActive }) {
 
   const isIpad = window.matchMedia("(max-width: 861px) and (min-height: 1000px)").matches;
+  const isPhone = window.matchMedia("(max-width: 415px)").matches;
 
   const [hoveredSkill, setHoveredSkill] = useState(-1);
 
   const [full, setFull] = useState(false);
 
   function handleChange(){
+      setHoveredSkill(-1)
       changeActive(isActive?-1:index)
   }
 
@@ -17,6 +19,23 @@ function SkillContainer({ children, skills, isActive, index, changeActive }) {
   let gtr="";
 
   switch (true) {
+
+    case isPhone:
+      gtc="100%";
+      if (hoveredSkill==-1) {
+        gtr="1fr";
+      }else {
+        for (var i = 0; i < skills.length; i++) {
+          if (i == hoveredSkill) {
+            gtr += "2.5fr";
+          }else{
+            gtr += "1fr";
+          }
+        }
+      }
+
+      break;
+
     case isIpad:
 
       if (hoveredSkill==-1) {
@@ -97,7 +116,7 @@ function SkillContainer({ children, skills, isActive, index, changeActive }) {
           isActive
           ?
           skills.skills.map((skill,id) =>
-            <div className="skill-container" key={id} id={id==hoveredSkill?"hovered-skill-container":null} onMouseEnter={()=> {setHoveredSkill(id)}} onMouseLeave={()=> {setHoveredSkill(-1)}}>
+            <div className="skill-container" key={id} id={id==hoveredSkill?"hovered-skill-container":null} onClick={(e)=> {e.stopPropagation() ; setHoveredSkill(id)}}>
               <p className="skill-name">{skill.name}</p>
               {
                 id==hoveredSkill

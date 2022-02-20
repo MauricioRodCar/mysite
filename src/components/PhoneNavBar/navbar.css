@@ -1,0 +1,30 @@
+.nav-bar{
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  background-color: rgba(196, 227, 203,0.8);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: .3s ease-out all;
+  z-index: 2;
+}
+
+.nav-active{
+  height: 20%;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.click-container{
+  width: 100%;
+}
+
+#click-me{
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 3em;
+}

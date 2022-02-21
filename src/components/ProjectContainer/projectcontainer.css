@@ -1,4 +1,4 @@
-.container{
+.project-container{
   position: absolute;
   top: 0;
   left: 200px;
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 415px ) {
-  .container{
+  .project-container{
     left: 0;
     height: 100%;
     width: 100%;

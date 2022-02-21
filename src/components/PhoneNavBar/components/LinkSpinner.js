@@ -40,12 +40,12 @@ function animate(n) {
   return(
     <div id="spinner-container">
       <div id="prev-nav-button" onClick={(e)=>{e.stopPropagation();animate(-1)}}/>
-      <div className="slottt-machine-recipe">
-        <div className="slottt-machine-recipe__mask" id="wordbox">
-            <div className="slottt-machine-recipe__items_container recipe_if" id="item-container">
+      <div className="slottt-machine-recipe-phone">
+        <div className="slottt-machine-recipe__mask-phone" id="wordbox">
+            <div className="slottt-machine-recipe__items_container-phone recipe_if" id="item-container">
               {
                 sideLinks.map((link, id) =>
-                  <div className='slottt-machine-recipe__item' key={id}>
+                  <div className='slottt-machine-recipe__item-phone' key={id}>
                     {link.label}
                   </div>
                 )

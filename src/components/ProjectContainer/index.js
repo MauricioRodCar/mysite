@@ -12,7 +12,7 @@ const ProjectContainer = ({ children, title }) => {
 
 
   return(
-    <div className="container">
+    <div className="project-container">
     <div className="back-to-portfolio" onClick={()=>{returnToPortfolio()}}/>
 
       <h1 className="project-container-title">{title}</h1>

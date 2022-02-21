@@ -65,6 +65,14 @@
   cursor: pointer;
 }
 
+.portfolio-external-link{
+  font-weight: auto;
+  color:#616161;
+  display: inline-block;
+  height: 100%;
+
+}
+
 @media (min-width: 1291px){
   #portfolio-wrapper{
     grid-template-columns: 30% 30% 30%;

@@ -6,7 +6,9 @@ function PortfolioContainer({index, title, endpoint, description, tags, listOfTa
   const history = useHistory();
 
   function redirect(){
-    history.push(endpoint);
+    if (endpoint.split("**")[0]!="ex") {
+      history.push(endpoint);
+    }
   }
 
 
@@ -16,23 +18,31 @@ function PortfolioContainer({index, title, endpoint, description, tags, listOfTa
   }
 
   return(
-    <div className={"portfolio-container "+customClass} style={endpoint?null:{filter: "grayscale(100%)", cursor:"auto"}} onClick={()=>{
-      if (endpoint) {
-        redirect()
-      }
-    }}>
-      <p className="portfolio-title">{title}</p>
-      <p className="portfolio-description">{description}</p>
-      <div className="portfolio-tag-container">
-      {
-        itemTags.map( (itemTag,index) =>
-          <div className="portfolio-tag" key={index} style={{backgroundColor:itemTag.color}}>
-            <p className="portfolio-tag-name">{itemTag.name}</p>
-          </div>
-         )
-      }
+
+      <div className={"portfolio-container "+customClass} style={endpoint?null:{filter: "grayscale(100%)", cursor:"auto"}} onClick={()=>{
+        if (endpoint) {
+          redirect()
+        }
+      }}>
+          <a className="portfolio-external-link" href={endpoint.split("**")[0]=="ex"?endpoint.split("**")[1]:"#"} onClick={(e)=>{
+            if (endpoint.split("**")[0]!="ex") {
+              e.preventDefault();
+            }
+        }} target="_blank">
+        <p className="portfolio-title">{title}</p>
+        <p className="portfolio-description">{description}</p>
+        <div className="portfolio-tag-container">
+        {
+          itemTags.map( (itemTag,index) =>
+            <div className="portfolio-tag" key={index} style={{backgroundColor:itemTag.color}}>
+              <p className="portfolio-tag-name">{itemTag.name}</p>
+            </div>
+           )
+        }
+        </div>
+            </a>
       </div>
-    </div>
+
   )
 };
 

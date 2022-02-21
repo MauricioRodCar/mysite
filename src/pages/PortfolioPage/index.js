@@ -9,7 +9,7 @@ const PortfolioPage = () => {
   const [pageTotal,setPageTotal] = useState(1);
   const [showingElements, setShowingElements] = useState([]);
   const [customClass, setCustomClass] = useState("");
-  const [filters, setFilters] = useState([true,true,true]);
+  const [filters, setFilters] = useState([true,true,true,true]);
   const [isIpad, setIsIpad] = useState(window.matchMedia("(max-width: 1280px)").matches)
   const [isPhone, setIsPhone] = useState(window.matchMedia("(max-width: 875px)").matches)
   const [isIphone, setIsIphone] = useState(window.matchMedia("(max-width: 415px)").matches)
@@ -83,6 +83,10 @@ const PortfolioPage = () => {
     {
       name:"Download",
       color:"#084594"
+    },
+    {
+      name:"AWS",
+      color:"#e65f06"
     }
   ])
 
@@ -94,10 +98,10 @@ const PortfolioPage = () => {
       tags: [1, 2, 3]
     },
     {
-      title: "Php/Java template",
-      endpoint: "",
-      description: "This might eventually become a php/java project for my portfolio please wait for it",
-      tags: [2, 3]
+      title: "AWS Amplify deploy",
+      endpoint: "ex**https://master.d2jhd3ckhgxyad.amplifyapp.com/",
+      description: "Clicking this item will redirect you to the aws amplify deployment of this application",
+      tags: [4]
     },
     {
       title: "Php template",

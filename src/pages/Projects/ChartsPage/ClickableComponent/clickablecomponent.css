@@ -1,0 +1,54 @@
+.clickable-component-container{
+  display: grid;
+  width: 200px;
+  height: 200px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+.clickable-area{
+  cursor: pointer;
+  transition: .3s ease-out;
+  width: 100%;
+  height: 100%;
+}
+
+#clickable-area-1{
+  -webkit-clip-path: polygon(25% 25%, 100% 50%, 100% 100%, 50% 100%);
+  clip-path: polygon(25% 25%, 100% 50%, 100% 100%, 50% 100%);
+}
+#clickable-area-1:hover{
+  -webkit-clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 50% 100%);
+  clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 50% 100%);
+}
+
+
+#clickable-area-2{
+  -webkit-clip-path: polygon(0% 50%, 75% 25%, 50% 100%, 0% 100%);
+  clip-path: polygon(0% 50%, 75% 25%, 50% 100%, 0% 100%);
+}
+
+#clickable-area-2:hover{
+  -webkit-clip-path: polygon(0% 50%, 100% 0%, 50% 100%, 0% 100%);
+  clip-path: polygon(0% 50%, 100% 0%, 50% 100%, 0% 100%);
+}
+
+#clickable-area-3{
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 25% 75%);
+  clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 25% 75%);
+}
+
+#clickable-area-3:hover{
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 0% 100%);
+  clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 0% 100%);
+}
+
+#clickable-area-4{
+  -webkit-clip-path: polygon(0% 0%, 50% 0%, 75% 75%, 0% 50%);
+  clip-path: polygon(0% 0%, 50% 0%, 75% 75%, 0% 50%);
+}
+
+#clickable-area-4:hover{
+  -webkit-clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 0% 50%);
+  clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 0% 50%);
+}

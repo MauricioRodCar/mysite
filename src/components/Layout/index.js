@@ -16,9 +16,7 @@ function Layout({ children }){
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
-  useEffect(() => {
 
-    }, [isPhone])
 
   return(
     <>

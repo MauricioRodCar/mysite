@@ -9,7 +9,7 @@ const PortfolioPage = () => {
   const [pageTotal,setPageTotal] = useState(1);
   const [showingElements, setShowingElements] = useState([]);
   const [customClass, setCustomClass] = useState("");
-  const [filters, setFilters] = useState([true,true,true,true]);
+  const [filters, setFilters] = useState([true,true,true,true,true]);
   const [isIpad, setIsIpad] = useState(window.matchMedia("(max-width: 1280px)").matches)
   const [isPhone, setIsPhone] = useState(window.matchMedia("(max-width: 875px)").matches)
   const [isIphone, setIsIphone] = useState(window.matchMedia("(max-width: 415px)").matches)
@@ -87,6 +87,10 @@ const PortfolioPage = () => {
     {
       name:"AWS",
       color:"#e65f06"
+    },
+    {
+      name:"Graphs",
+      color:"#663399"
     }
   ])
 
@@ -104,10 +108,10 @@ const PortfolioPage = () => {
       tags: [4]
     },
     {
-      title: "Php template",
-      endpoint: "",
-      description: "This might eventually become a php project for my portfolio please wait for it",
-      tags: [2]
+      title: "Click counter",
+      endpoint: "/clicks",
+      description: "This small project records the amount of clicks done and presents the information in graphs",
+      tags: [2, 3, 5]
     },
     {
       title: "React/Java template",

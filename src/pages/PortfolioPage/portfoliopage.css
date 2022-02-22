@@ -66,7 +66,7 @@
 }
 
 .portfolio-external-link{
-  font-weight: auto;
+  font-weight: normal;
   color:#616161;
   display: inline-block;
   height: 100%;
@@ -82,7 +82,7 @@
 
 @media (min-width: 875px) and (max-width: 1290px){
   .portfolio-filter-tag{
-    margin: 0 2.5%;
+    margin: 8 2.5%;
   }
 
   #portfolio-wrapper{
@@ -112,8 +112,13 @@
 }
 
 @media (max-width: 415px){
+
+  #portfolio-wrapper{
+    padding-left: 10%;
+  }
+
   .portfolio-filter-tag{
     width: 20%;
-    margin: 0 5%;
+    margin: 10px 5%;
   }
 }

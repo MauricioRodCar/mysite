@@ -41,7 +41,6 @@ const RecipePage = () => {
     setIngredients(newIngredients)
   }
 
-  console.log( window.innerWidth + "," + window.innerHeight);
 
 
   return (

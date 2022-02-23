@@ -1,0 +1,43 @@
+.product-preview-wrapper{
+  border: 1px solid rgba(8,8,8,.1);
+}
+
+.product-image{
+  width: 100%;
+  height: 50%;
+}
+
+.product-info{
+  padding: 0 5%;
+}
+
+.product-text{
+  font-size: .75em;
+}
+
+.product-name{
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.product-original-price{
+  margin-left: 10px;
+}
+
+.product-rating-wrapper{
+  width: 100%;
+  height: auto;
+}
+
+.stars-wrapper{
+  width: 30%;
+  display: inline-block;
+}
+
+.rating-star{
+  width: 18%;
+}
+
+.star-half{
+  transform: scale(.8);
+}

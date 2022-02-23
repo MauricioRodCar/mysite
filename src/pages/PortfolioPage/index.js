@@ -9,7 +9,7 @@ const PortfolioPage = () => {
   const [pageTotal,setPageTotal] = useState(1);
   const [showingElements, setShowingElements] = useState([]);
   const [customClass, setCustomClass] = useState("");
-  const [filters, setFilters] = useState([true,true,true,true,true]);
+  const [filters, setFilters] = useState([true,true,true,true,true,true]);
   const [isIpad, setIsIpad] = useState(window.matchMedia("(max-width: 1280px)").matches)
   const [isPhone, setIsPhone] = useState(window.matchMedia("(max-width: 875px)").matches)
   const [isIphone, setIsIphone] = useState(window.matchMedia("(max-width: 415px)").matches)
@@ -91,6 +91,10 @@ const PortfolioPage = () => {
     {
       name:"Graphs",
       color:"#663399"
+    },
+    {
+      name:"Api",
+      color:"red"
     }
   ])
 
@@ -114,10 +118,10 @@ const PortfolioPage = () => {
       tags: [2, 3, 5]
     },
     {
-      title: "React/Java template",
-      endpoint: "",
-      description: "This might eventually become a react/java project for my portfolio please wait for it",
-      tags: [1, 3]
+      title: "My Shop",
+      endpoint: "/shop",
+      description: "This small project fetches information from the free to use api 'FakeStoreAPI' and displays it as an e-shop",
+      tags: [6]
     },
     {
       title: "Php/Java template",

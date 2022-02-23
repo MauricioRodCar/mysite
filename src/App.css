@@ -7,6 +7,22 @@
   pointer-events: none;
 }
 
+.rotate-alert{
+  width: 100%;
+  position: absolute;
+  height: 415px;
+  top: 0;
+
+}
+
+.rotate-text{
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  margin-top: calc(207px - 25px);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

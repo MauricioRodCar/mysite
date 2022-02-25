@@ -9,7 +9,7 @@ const PortfolioPage = () => {
   const [pageTotal,setPageTotal] = useState(1);
   const [showingElements, setShowingElements] = useState([]);
   const [customClass, setCustomClass] = useState("");
-  const [filters, setFilters] = useState([true,true,true,true,true,true]);
+  const [filters, setFilters] = useState([true,true,true,true,true,true,true]);
   const [isIpad, setIsIpad] = useState(window.matchMedia("(max-width: 1280px)").matches)
   const [isPhone, setIsPhone] = useState(window.matchMedia("(max-width: 875px)").matches)
   const [isIphone, setIsIphone] = useState(window.matchMedia("(max-width: 415px)").matches)
@@ -95,6 +95,10 @@ const PortfolioPage = () => {
     {
       name:"Api",
       color:"red"
+    },
+    {
+      name:"Canvas",
+      color:"lightblue"
     }
   ])
 
@@ -124,10 +128,10 @@ const PortfolioPage = () => {
       tags: [6]
     },
     {
-      title: "Php/Java template",
-      endpoint: "",
-      description: "This might eventually become a php/java project for my portfolio please wait for it",
-      tags: [2, 3]
+      title: "Canvas sketchpad",
+      endpoint: "/sketchpad",
+      description: "This small project contains a canvas where is possible to draw using the cursor like in a sketchpad",
+      tags: [7]
     },
     {
       title: "React template",

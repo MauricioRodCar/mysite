@@ -1,0 +1,108 @@
+.sketchpad-wrapper, #brush-thickness{
+  display: flex;
+}
+.canvas-controlls-wrapper, .canvas-component-container{
+  display: inline-block;
+}
+
+.canvas-component-container{
+  margin-left: 30%;
+}
+
+.canvas-controlls-wrapper{
+    margin-left: 5%;
+}
+
+.canvas-controlls-container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 5%;
+  width: 200px;
+  height: 400px;
+}
+
+.thickness-level{
+  width: 20%;
+  height: 100%;
+}
+
+#thickness-active{
+  background-color: rgba(196, 227, 203,1);
+}
+
+.thickness-dot{
+  margin: 45%;
+}
+
+#change-color{
+  display: none
+}
+
+#eraser, #save-button, #brush-color, #brush-thickness{
+  width: 98%;
+  height: 98%;
+  font-size: 2em;
+  text-align: center;
+  cursor: pointer;
+  background-color:rgba(196, 227, 203,0.6);
+  border-radius: 5px;
+  transition: .3s ease-out all;
+}
+
+#color-label{
+  position: relative;
+  top: 0;
+}
+
+@media(max-width: 1200px){
+  .canvas-component-container{
+    margin-left: 15%;
+  }
+}
+
+@media(max-width: 1000px){
+  .canvas-component-container{
+    margin-left: 5%;
+  }
+}
+
+@media(max-width: 875px){
+  .canvas-component-container{
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 415px){
+  .sketchpad-wrapper{
+    display: block;
+  }
+
+  .canvas-controlls-wrapper{
+    margin-left: 0;
+  }
+
+  .canvas-controlls-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-gap: 1%;
+    width: 400px;
+    height: 50px;
+  }
+
+  #eraser, #save-button, #brush-color, #brush-thickness{
+    font-size: 1.4em;
+  }
+
+  #eraser-label, #save-label{
+    margin-top: 10%;
+  }
+
+  #color-label{
+    margin-top: 0;
+  }
+
+  .thickness-dot{
+    margin-top: 20px;
+  }
+}

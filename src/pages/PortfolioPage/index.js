@@ -131,7 +131,7 @@ const PortfolioPage = () => {
       title: "Canvas sketchpad",
       endpoint: "/sketchpad",
       description: "This small project contains a canvas where is possible to draw using the cursor like in a sketchpad",
-      tags: [7]
+      tags: [2,3,7]
     },
     {
       title: "React template",

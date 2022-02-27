@@ -104,6 +104,12 @@ const PortfolioPage = () => {
 
   const [portfolioItems] = useState([
     {
+      title: "Dijkstra shortest route",
+      endpoint: "/dijkstra",
+      description: "This project allows you to find the shortest routhe between two points using dijkstra's algorithm",
+      tags: [2, 7]
+    },
+    {
       title: "Recipe builder",
       endpoint: "/recipe",
       description: "This small project allows you to create a recipe, add an image and download the result",
@@ -132,12 +138,6 @@ const PortfolioPage = () => {
       endpoint: "/sketchpad",
       description: "This small project contains a canvas where is possible to draw using the cursor like in a sketchpad",
       tags: [2,3,7]
-    },
-    {
-      title: "React template",
-      endpoint: "",
-      description: "This might eventually become a react project for my portfolio please wait for it",
-      tags: [1]
     },
     {
       title: "React/Php/Java template",

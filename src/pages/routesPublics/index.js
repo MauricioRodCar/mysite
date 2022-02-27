@@ -10,6 +10,8 @@ const RecipePage = lazy( () => import( "../Projects/RecipePage" ) );
 const ChartsPage = lazy( () => import( "../Projects/ChartsPage" ) );
 const EcommercePage = lazy( () => import( "../Projects/EcommercePage" ) );
 const SketchpadPage = lazy( () => import( "../Projects/SketchpadPage" ) );
+const DijkstraPage = lazy( () => import( "../Projects/DijkstraPage" ) );
+
 
 const RoutesPublics = () => {
 
@@ -21,6 +23,7 @@ const RoutesPublics = () => {
    { path: '/clicks', component: ChartsPage },
    { path: '/shop', component: EcommercePage },
    { path: '/sketchpad', component: SketchpadPage },
+   { path: '/dijkstra', component: DijkstraPage},
  ]);
 
 

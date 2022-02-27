@@ -1,0 +1,12 @@
+#sketchpad-board{
+  border: 1px solid black;
+  touch-action: none;
+}
+
+#upload-photo{
+  display: none;
+}
+
+.config-table{
+  display: inline-block;
+}

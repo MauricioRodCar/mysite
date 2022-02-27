@@ -1,0 +1,110 @@
+.sketchpad-wrapper{
+  display: flex;
+}
+.canvas-controlls-wrapper, .canvas-component-container{
+  display: inline-block;
+}
+
+.canvas-component-container{
+  margin-left: 30%;
+}
+
+.canvas-controlls-wrapper{
+    margin-left: 5%;
+}
+
+.dijkstra-info-container{
+  margin-left: 2%;
+}
+
+.customButton{
+  width: 200px;
+  height: 50px;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+  background-color:rgba(196, 227, 203,0.8);
+  border-radius: 5px;
+  transition: .3s ease-out all;
+  margin: 10px 0;
+}
+
+.canvas-path-container{
+  display: flex;
+  margin-left: 5%;
+}
+
+.canvas-path-container  select{
+  height: 40px;
+}
+
+.canvas-path-container  table{
+  margin-right: 20px;
+}
+
+.add-line-container table{
+  width: 140px;
+  margin-left: calc(50% - 70px);
+}
+
+.coord-table-header{
+  background-color:rgba(196, 227, 203,0.6);
+  height: 30px;
+}
+
+td{
+  text-align: center;
+}
+
+.table-element-delete{
+  cursor: pointer;
+}
+
+#canvas-image-button{
+  margin-left: calc(50% - 100px)
+}
+
+.customButton:hover{
+  background-color:rgba(196, 227, 203,0.5);
+}
+
+@media(max-width: 1200px){
+  .canvas-component-container{
+    margin-left: 15%;
+  }
+}
+
+@media(max-width: 1000px){
+  .canvas-component-container{
+    margin-left: 5%;
+  }
+}
+
+@media(max-width: 875px){
+  .canvas-component-container{
+    margin-left: 0;
+  }
+
+  .dijkstra-info-container{
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 415px){
+  .sketchpad-wrapper{
+    display: block;
+  }
+
+  .canvas-controlls-wrapper{
+    margin-left: 0;
+  }
+
+  #connect-button{
+    margin-left: calc(50% - 100px);
+  }
+
+  .dijkstra-info-container table {
+    margin-left: calc(50% - 100px)
+  }
+}

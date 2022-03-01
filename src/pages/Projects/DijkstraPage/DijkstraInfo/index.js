@@ -9,8 +9,12 @@ const DijkstraInfo = ({coordinates, handleAddLine, lines, handleChangeLines, coo
       },[coordinates])
 
   function handleCreateLine(){
-    let distance = Math.sqrt(Math.pow((coord1.x-coord2.x), 2)+Math.pow((coord1.y-coord2.y), 2))
-    handleAddLine({coord1:coord1, coord2: coord2, distance: Math.round(distance * 100) / 100})
+    if (coord1!=-1 && coord2!=-1) {
+      let distance = Math.sqrt(Math.pow((coord1.x-coord2.x), 2)+Math.pow((coord1.y-coord2.y), 2))
+      handleAddLine({coord1:coord1, coord2: coord2, distance: Math.round(distance * 100) / 100})
+    }else {
+      alert("Please make sure to select both coords before trying to connect them");
+    }
   }
 
   function handleDelete(e){
